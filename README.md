@@ -37,6 +37,11 @@
 - TMDB Image CDN URL
 - created custom hooks for Now Playing,Popular,Top Rated, upcoming movies APIs and dispayed 
 - Made the Browser page amazing with tailwind css
+- GPT Search Page, GPT Search Bar
+- Create a Slice for GPT and config (Language Info)
+- Multi Linguage Feature for GPT Search Bar
+- 
+
 
 # Features
 - Login/SignUp 

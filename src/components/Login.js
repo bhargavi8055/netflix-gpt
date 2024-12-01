@@ -40,7 +40,6 @@ const Login = ()=>{
             })
             .then(()=>{
                 const {uid,email,displayName,photoURL} = auth.currentUser ;
-                console.log("in login")
                 dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
                
             })
@@ -74,10 +73,11 @@ const Login = ()=>{
     return (
         <div>
             <Header />
-            <div className="absolute w-screen h-screen">
-                <img className="w-full h-full object-cover"
-                src={BG_URL}
-                alt="background-image"
+            <div className="absolute inset-0 w-full h-[120%]">
+                <img
+                    className="w-full h-full object-cover"
+                    src={BG_URL}
+                    alt="background-image"
                 />
             </div>
             <form onSubmit={(e)=>e.preventDefault()}

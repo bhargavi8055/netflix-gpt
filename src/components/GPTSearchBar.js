@@ -25,7 +25,6 @@ const GPTSearchBar = ()=>{
     }
 
     const handleGPTSearchClick = async()=>{
-        console.log(searchText.current.value);
         const gptSearchQuery = "Act as a Movie Recommendation system and suggest some for the query: "+
         searchText.current.value +
         ". only give me names of 5 movies, comma separated like the example result given a head. Example Result: Gadar,Sholay,Don,Golmal,Koi Mil Gaya";
@@ -42,14 +41,14 @@ const GPTSearchBar = ()=>{
         // const gptMovies = gptResults?.choices?.[0]?.message?.content.split(",")
 
         const gptMovies= "Andaz Apna Apna,Hera Pheri,Chupke Chupke,Jaane Bhi Do Yaaro,Padosan".split(",")
-        console.log(gptMovies);
+        // console.log(gptMovies);
         //['Andaz Apna Apna', 'Hera Pheri', 'Chupke Chupke', 'Jaane Bhi Do Yaaro', 'Padosan']
 
         const promiseArray =gptMovies.map((movie)=>searchMovieTMDB(movie))
         //[Promise,Promise,Promise,Promise,Promise]
         const TMDBResults =await Promise.all(promiseArray);
 
-        console.log(TMDBResults)
+        // console.log(TMDBResults)
 
         dispatch(addGPTMovieResults({movieNames:gptMovies,movieResultsTMDB:TMDBResults}))
 

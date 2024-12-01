@@ -1,10 +1,12 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { API_OPTIONS } from "../utils/constants";
 import { addTrailerVideo } from "../utils/moviesSlice";
 
 const useMovieTrailer = (id)=>{
 
+    const trailerVideo = useSelector(store=>store.movies.trailerVideo)
+    
     const dispatch = useDispatch();
     const url = 'https://api.themoviedb.org/3/movie/'+id+'/videos';
 
@@ -18,6 +20,7 @@ const useMovieTrailer = (id)=>{
     }
 
     useEffect(()=>{
+        if(!trailerVideo)
         getMovieVideos();
     },[])
 }

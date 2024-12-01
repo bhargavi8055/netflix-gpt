@@ -16,7 +16,7 @@
 - Implemented SignOut Feature
 - Updated Profile API Call
 - Bug fix of user displayname and profile picture update
-- Bug fix : if user is not loggedin redirects to login page and if user loggedin redirects to browse page
+- Bug fix : if user is not loggedin redirects to login page and if user loggedin redirects to browse  page
 - unsubscribed to the onAuthStageChange Callback
 - Add hardcoded values to the constants file
 - Register TMDB API & create an app & get access Token
@@ -40,7 +40,9 @@
 - GPT Search Page, GPT Search Bar
 - Create a Slice for GPT and config (Language Info)
 - Multi Linguage Feature for GPT Search Bar
-- 
+- Create GPT API key get the movie list from the results of GPT API
+- Get the related movie info from the TMDB Website with the use of movie list provided by GPT API.
+
 
 
 # Features

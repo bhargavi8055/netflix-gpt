@@ -52,8 +52,8 @@ const Header = ()=>{
         dispatch(changeLanguage(e.target.value))
     }
     return (
-        <div className="absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between">
-            <img className="w-44"
+        <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10  flex flex-col md:justify-between md:flex-row  ">
+            <img className="w-44 mx-auto md:mx-0"
             src={LOGO} 
             alt="logo"/>
             {
@@ -69,7 +69,7 @@ const Header = ()=>{
                     <button className="bg-purple-800 text-white py-2 px-4 m-2 rounded-lg cursor-pointer"
                     onClick={handleGPTSearch}
                     >{ gptShowValue ? "Home Page" :"GPT Search"}</button>
-                    <img className="w-14 h-14 p-2 rounded-3xl" src={user.photoURL} alt="usericon"/>
+                    <img className="hidden md:block w-14 h-14 p-2 rounded-3xl" src={user.photoURL} alt="usericon"/>
                     <button className="font-bold text-white p-2 cursor-pointer" onClick={handleSignout}>(Sign Out)</button>
                 </div>
             }

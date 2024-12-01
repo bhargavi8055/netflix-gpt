@@ -40,8 +40,13 @@
 - GPT Search Page, GPT Search Bar
 - Create a Slice for GPT and config (Language Info)
 - Multi Linguage Feature for GPT Search Bar
-- Create GPT API key get the movie list from the results of GPT API
-- Get the related movie info from the TMDB Website with the use of movie list provided by GPT API.
+- Get Open AI API Key
+- GPT Search API Call
+- fetched gptMovieSuggestions from TMDB
+- added .env file 
+- added .env file to gitignore
+- Memoisation - If we have already data in our store, then we need not to request API again and again to fetch the data
+- Apply Tailwind CSS to look better.
 
 
 

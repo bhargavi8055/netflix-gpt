@@ -1,9 +1,14 @@
 import OpenAI from "openai";
 import { OPENAI_KEY } from "./constants";
+import { useSelector } from "react-redux";
 
-const openai = new OpenAI({
-    apiKey:OPENAI_KEY,
-    dangerouslyAllowBrowser:true
-});
+const OpenAi= ()=>{
+    const GPTSearchKey = useSelector(store=>store.gpt.GPTSearchKey);
+    const openai = new OpenAI({
+        apiKey:GPTSearchKey,
+        dangerouslyAllowBrowser:true
+    });
+}
 
-export default openai;
+
+export default OpenAi.openai;

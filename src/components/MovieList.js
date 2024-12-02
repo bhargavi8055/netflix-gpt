@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import MovieInfo from "./MovieInfo";
 
 const MovieList = ({moviesList,title})=>{
-    // console.log(moviesList)
+    
     const [selectedMovie,setSelectedMovie] = useState(null);
     return (
         <div className="relative">

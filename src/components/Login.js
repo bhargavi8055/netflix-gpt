@@ -73,7 +73,7 @@ const Login = ()=>{
     return (
         <div>
             <Header />
-            <div className="absolute inset-0 w-full h-[120%]">
+            <div className="absolute inset-0 w-full h-[150%] md:h-[140%]">
                 <img
                     className="w-full h-full object-cover"
                     src={BG_URL}
@@ -105,6 +105,18 @@ const Login = ()=>{
                     className="p-2 my-4 w-full bg-gray-900 rounded-md" />
 
                 <p className="font-bold text-md text-red-600">{errorMessage?errorMessage:""}</p>
+                {
+                    errorMessage==="Password is not valid"?(
+                        <ul className="text-red-600 text-sm hidden md:block">
+                            <li>At least 8–16 characters</li>
+                            <li>Include uppercase letters (A–Z).</li>
+                            <li>Include lowercase letters (a–z).</li>
+                            <li>Include numbers (0–9).</li>
+                            <li>Include special characters (e.g., @, #, $, %).</li>
+                        </ul>
+                    ):""
+                }
+                
                 <button 
                     className="p-2 my-6 bg-red-700 w-full rounded-md"
                     onClick={handleButtonClick}

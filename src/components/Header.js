@@ -58,7 +58,7 @@ const Header = ()=>{
             alt="logo"/>
             {
                 user && 
-                <div className="flex p-4 justify-around ">
+                <div className="flex p-0 md:p-4 justify-around ">
                     {
                         gptShowValue &&
                         <select className="px-2 bg-gray-900 text-white m-2 py-0 rounded-md" onChange={handleChangeLanguage}>

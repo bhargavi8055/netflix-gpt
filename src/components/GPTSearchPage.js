@@ -15,7 +15,7 @@ const GPTSearchPage = ()=>{
                 />
             </div>
             
-            <div className="pt-[30%] md:pt-[0%]">
+            <div className="pt-[50%] md:pt-[0%]">
                 <GPTSearchBar />
                 <GPTMovieSuggestions />
             </div>

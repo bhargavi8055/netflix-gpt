@@ -67,7 +67,7 @@ const GPTSearchBar = ()=>{
                 />
                 <button 
                 onClick={handleGPTSearchClick}
-                className=" col-span-3  py-2 m-4 mx-1 mr-2 md:m-4 px-6 bg-red-700 text-white rounded-lg ">{lang[langKey].search}</button>
+                className=" col-span-3  py-2 m-4 mx-1 mr-2 md:m-4 px-2 md:px-6 bg-red-700 text-white rounded-lg ">{lang[langKey].search}</button>
 
             </form>
         </div>

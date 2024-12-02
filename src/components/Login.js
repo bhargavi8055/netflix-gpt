@@ -49,9 +49,8 @@ const Login = ()=>{
             
         })
         .catch((error)=>{
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            setErrorMessage(errorCode+"=="+errorMessage)
+            const msg= error.message==="Firebase: Error (auth/email-already-in-use)."?"Email Already Exists":error.message
+            setErrorMessage(msg)
         })
        }
        else{
@@ -61,9 +60,8 @@ const Login = ()=>{
             const user = userCredential.user;
         })
         .catch((error)=>{
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            setErrorMessage(errorCode+"=="+errorMessage)
+            const msg=error.message=="Firebase: Error (auth/invalid-credential)."?"Invalid Email/Password":error.message
+            setErrorMessage(msg)
         })
        }
     }

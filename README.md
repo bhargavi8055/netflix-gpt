@@ -1,5 +1,6 @@
 # Netflix-gpt
-
+  Hosted URL:
+    https://netflixgpt-2b6ca.web.app/
 - Create React App 
 - Configure Tailwind CSS
 - Header
